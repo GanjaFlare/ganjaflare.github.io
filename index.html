@@ -1076,13 +1076,29 @@
             <img src="images/ganjared.png" alt="Red Coin">
           </div>
 
-          <div style="text-align: center;">
-            <a href="https://flare-explorer.flare.network/token/0x2768E83F67D1bAFeBc5A49cdCD9B65Cc4DBc9b71" target="_blank" class="btn-mint-style">
-              <i class="fa-solid fa-compass"></i> Flare Explorer
+          <div style="text-align: center; margin-bottom: 24px;">
+            <a href="https://ganjaflare-nft-v1-viewer.vercel.app/" target="_blank" class="btn-mint-style" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); font-size: 1rem; padding: 14px 28px; width: 100%; max-width: 480px; box-shadow: 0 0 20px rgba(52, 211, 153, 0.5);">
+              <i class="fa-solid fa-rocket"></i> <span data-i18n="nft_v1_launch_btn">Launch GanjaFlare NFT v1 Viewer</span> <i class="fa-solid fa-arrow-right"></i>
             </a>
-            <a href="https://www.aurixnft.com/collection/ganja" target="_blank" class="btn-mint-style aurix">
-              <i class="fa-solid fa-store"></i> Aurix NFT Marketplace
-            </a>
+          </div>
+
+          <div class="info-card">
+            <h4 style="color: var(--emerald-green); font-size: 1.1rem; font-weight: 800; margin-bottom: 12px;">
+              GanjaFlare NFT v1
+            </h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; font-size: 0.88rem; margin-bottom: 15px;">
+              <div><strong data-i18n="nft_v1_coll_name">Collection Name :</strong> <span data-i18n="nft_v1_coll_val">GanjaFlare NFT</span></div>
+              <div><strong data-i18n="nft_v1_supply">Total Supply :</strong> 100</div>
+              <div><strong data-i18n="nft_v1_symbol">Symbol :</strong> GANJANFT</div>
+              <div><strong data-i18n="nft_v1_network">Network :</strong> Flare Mainnet</div>
+            </div>
+
+            <div class="copy-box" onclick="copyContract('0x2768E83F67D1bAFeBc5A49cdCD9B65Cc4DBc9b71', 'nftV1CopyBtn')">
+              <div>
+                <div class="copy-text">0x2768E83F67D1bAFeBc5A49cdCD9B65Cc4DBc9b71</div>
+              </div>
+              <div class="copy-btn" id="nftV1CopyBtn"><i class="fa-solid fa-copy"></i> COPY</div>
+            </div>
           </div>
 
           <div style="margin-top: 25px; border-top: 1px solid rgba(52, 211, 153, 0.2); padding-top: 18px;">
@@ -1474,6 +1490,9 @@
         nft_v2_airdrop_rule: "Receive 1 DNE Airdrop per 1 GanjaFlare NFT v1 held",
         nft_v2_airdrop_date: "🎁 Airdrop: September 3, 12:00 UTC",
         nft_v2_mint_date: "🪙 Public Mint: September 5, 12:00 UTC",
+        nft_v1_launch_btn: "Launch GanjaFlare NFT v1 Viewer",
+        nft_v1_coll_name: "Collection Name :", nft_v1_coll_val: "GanjaFlare NFT",
+        nft_v1_supply: "Total Supply :", nft_v1_symbol: "Symbol :", nft_v1_network: "Network :",
         nft_v2_reward_title: "Reward System (1st of Every Month)",
         rate_leg: "150+ pts", rate_epic: "90-149 pts", rate_rare: "60-89 pts", rate_com: "Below 59 pts",
         nft_v2_reward_expire: "(Unclaimed rewards will expire after 1 month)",
@@ -1547,6 +1566,9 @@
         nft_v2_airdrop_rule: "GanjaFlare NFT v1 を1枚保有につき 1 DNE を Airdrop",
         nft_v2_airdrop_date: "🎁 Airdrop：9月3日 12:00 UTC",
         nft_v2_mint_date: "🪙 Public Mint：9月5日 12:00 UTC",
+        nft_v1_launch_btn: "GanjaFlare NFT v1 viewerを起動",
+        nft_v1_coll_name: "コレクション名 :", nft_v1_coll_val: "GanjaFlare NFT",
+        nft_v1_supply: "総発行枚数 :", nft_v1_symbol: "シンボル :", nft_v1_network: "ネットワーク :",
         nft_v2_reward_title: "Reward system（毎月1日の報酬システム）",
         rate_leg: "150点 以上", rate_epic: "90〜149点", rate_rare: "60〜89点", rate_com: "59点 以下",
         nft_v2_reward_expire: "（未請求報酬は1ヶ月後に消滅します）",
@@ -1620,6 +1642,9 @@
         nft_v2_airdrop_rule: "每持有1枚 GanjaFlare NFT v1 可获空投 1 DNE",
         nft_v2_airdrop_date: "🎁 空投时间：9月3日 12:00 UTC",
         nft_v2_mint_date: "🪙 公开铸造：9月5日 12:00 UTC",
+        nft_v1_launch_btn: "启动 GanjaFlare NFT v1 查看器",
+        nft_v1_coll_name: "系列名称 :", nft_v1_coll_val: "GanjaFlare NFT",
+        nft_v1_supply: "总发行量 :", nft_v1_symbol: "代币符号 :", nft_v1_network: "网络 :",
         nft_v2_reward_title: "奖励系统（每月1日发放）",
         rate_leg: "150分 以上", rate_epic: "90〜149分", rate_rare: "60〜89分", rate_com: "59分 以下",
         nft_v2_reward_expire: "（未领取的奖励将在1个月后失效）",
