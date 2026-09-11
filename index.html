@@ -1380,7 +1380,47 @@
           </ul>
         </div>
 
-        <!-- Accordion 2 -->
+        <!-- Accordion 2: Roadmap -->
+        <button class="accordion-btn" onclick="toggleAccordion('roadmapDoc')">
+          <span><i class="fa-solid fa-map"></i> <span data-i18n="accordion_road_title">Official Roadmap: The Path to Absolute Decentralization</span></span>
+          <i class="fa-solid fa-chevron-down" id="roadmapDocIcon"></i>
+        </button>
+        <div id="roadmapDoc" class="accordion-content">
+          <p style="margin-bottom: 12px;" data-i18n="road_intro">
+            GanjaFlare is a community-driven cultural ecosystem built on the Flare Network through $GANJA, interactive games, and unique NFTs. Operating on a 100% Fair Launch model—with no presale, no VCs, and no team reserves—our ultimate destination is absolute decentralization.
+          </p>
+          <p style="margin-bottom: 12px;" data-i18n="road_intro2">
+            By returning value to the community through active products and permanently burning the initial LP, we are transforming $GANJA into a truly immortal, community-owned memecoin culture.
+          </p>
+
+          <h4 style="color: var(--emerald-green); margin: 10px 0 6px; font-weight: 800;" data-i18n="road_p1_h">Phase 1: Foundation &amp; Initial Ignition (Completed / Ongoing)</h4>
+          <ul class="step-list" style="margin-top: 6px; margin-bottom: 12px;">
+            <li data-i18n="road_p1_li1">100% Fair Launch</li>
+            <li data-i18n="road_p1_li2">Transparent Management of Strategic Reserve</li>
+            <li data-i18n="road_p1_li3">Activation of Deflationary Mechanism (Regular Burns)</li>
+          </ul>
+
+          <h4 style="color: var(--emerald-green); margin: 10px 0 6px; font-weight: 800;" data-i18n="road_p2_h">Phase 2: Cultural Expansion &amp; Organic Distribution (Current Phase)</h4>
+          <ul class="step-list" style="margin-top: 6px; margin-bottom: 12px;">
+            <li data-i18n="road_p2_li1">Interactive Gaming Ecosystem</li>
+            <li data-i18n="road_p2_li2">Evolution of the NFT Ecosystem</li>
+            <li data-i18n="road_p2_li3">Community Rewards (Giveaways) &amp; Liquidity Reinforcement</li>
+          </ul>
+
+          <h4 style="color: var(--emerald-green); margin: 10px 0 6px; font-weight: 800;" data-i18n="road_p3_h">Phase 3: Final LP Burn &amp; Immortality</h4>
+          <ul class="step-list" style="margin-top: 6px; margin-bottom: 12px;">
+            <li data-i18n="road_p3_li1"><strong style="color: #f8fafc;">Complete Reserve Distribution / Burn</strong>: Distribute all promotional $GANJA through gaming and community initiatives (or burn any remaining balance).</li>
+            <li data-i18n="road_p3_li2"><strong style="color: #f8fafc;">The Final LP Burn (Set Free)</strong>: Permanently burn the original founder-held LP tokens, locking the liquidity pool 100% forever and making it completely un-ruggable.</li>
+            <li data-i18n="road_p3_li3"><strong style="color: #f8fafc;">Absolute Decentralization</strong>: Transition into a true community-driven era that operates autonomously solely through the passion of holders, without relying on central authorities.</li>
+            <li data-i18n="road_p3_li4"><strong style="color: #f8fafc;">Completion of GanjaFlare</strong>: Ascend into a permanent, unstoppable, and immortal Web3 cultural movement.</li>
+          </ul>
+
+          <p style="font-style: italic; color: var(--text-sub); border-top: 1px solid rgba(52, 211, 153, 0.2); padding-top: 12px;" data-i18n="road_quote">
+            "No central control. No middleman. Just passion, community, and the Flare ecosystem."
+          </p>
+        </div>
+
+        <!-- Accordion 3 -->
         <button class="accordion-btn" onclick="toggleAccordion('discDoc')">
           <span><i class="fa-solid fa-shield-halved"></i> <span data-i18n="accordion_disc_title">Disclaimer & Legal Compliance</span></span>
           <i class="fa-solid fa-chevron-down" id="discDocIcon"></i>
@@ -1543,6 +1583,23 @@
         tok_sec3_p: "The remaining 42.86% (18,000,000 $GANJA) is strategically managed for sustainable community expansion and autonomous economic loops:",
         tok_sec3_li1: "<strong style=\"color: #f8fafc;\">Permanent Monthly BURN</strong>: 777,777 $GANJA sent to blackhole address monthly to reduce circulating supply.",
         tok_sec3_li2: "<strong style=\"color: #f8fafc;\">Incentives & Product Returns</strong>: Re-circulated to active contributors via GanjaCatRun game rewards, daily lotto, and community events.",
+        accordion_road_title: "Official Roadmap: The Path to Absolute Decentralization",
+        road_intro: "GanjaFlare is a community-driven cultural ecosystem built on the Flare Network through $GANJA, interactive games, and unique NFTs. Operating on a 100% Fair Launch model—with no presale, no VCs, and no team reserves—our ultimate destination is absolute decentralization.",
+        road_intro2: "By returning value to the community through active products and permanently burning the initial LP, we are transforming $GANJA into a truly immortal, community-owned memecoin culture.",
+        road_p1_h: "Phase 1: Foundation & Initial Ignition (Completed / Ongoing)",
+        road_p1_li1: "100% Fair Launch",
+        road_p1_li2: "Transparent Management of Strategic Reserve",
+        road_p1_li3: "Activation of Deflationary Mechanism (Regular Burns)",
+        road_p2_h: "Phase 2: Cultural Expansion & Organic Distribution (Current Phase)",
+        road_p2_li1: "Interactive Gaming Ecosystem",
+        road_p2_li2: "Evolution of the NFT Ecosystem",
+        road_p2_li3: "Community Rewards (Giveaways) & Liquidity Reinforcement",
+        road_p3_h: "Phase 3: Final LP Burn & Immortality",
+        road_p3_li1: "<strong style=\"color: #f8fafc;\">Complete Reserve Distribution / Burn</strong>: Distribute all promotional $GANJA through gaming and community initiatives (or burn any remaining balance).",
+        road_p3_li2: "<strong style=\"color: #f8fafc;\">The Final LP Burn (Set Free)</strong>: Permanently burn the original founder-held LP tokens, locking the liquidity pool 100% forever and making it completely un-ruggable.",
+        road_p3_li3: "<strong style=\"color: #f8fafc;\">Absolute Decentralization</strong>: Transition into a true community-driven era that operates autonomously solely through the passion of holders, without relying on central authorities.",
+        road_p3_li4: "<strong style=\"color: #f8fafc;\">Completion of GanjaFlare</strong>: Ascend into a permanent, unstoppable, and immortal Web3 cultural movement.",
+        road_quote: "\"No central control. No middleman. Just passion, community, and the Flare ecosystem.\"",
         accordion_disc_title: "Disclaimer & Legal Compliance",
         disc_sec1_h: "1. No Investment Advice",
         disc_sec1_p: "$GANJA is a cultural community memecoin on Flare Network and does not constitute a financial product or investment asset. Statements promising guaranteed profit or price skyrocket are strictly prohibited under community guidelines. Please participate with full personal responsibility.",
@@ -1619,6 +1676,23 @@
         tok_sec3_p: "残る 42.86%（18,000,000 $GANJA） は、コミュニティの持続的な拡大と自律的エコノミーの形成のために戦略管理されています。",
         tok_sec3_li1: "<strong style=\"color: #f8fafc;\">毎月恒久BURN（定期焼却）</strong>: 毎月1回、777,777 $GANJA をブラックホールアドレスへ送付し永久焼却。実質的な流通供給量を段階的に減少させます。",
         tok_sec3_li2: "<strong style=\"color: #f8fafc;\">インセンティブ＆プロダクト還元</strong>: エコシステムゲーム「GanjaCatRun」の報酬、デイリーロト、コミュニティイベントへの配布により、能動的な貢献者へ循環させます。",
+        accordion_road_title: "公式ロードマップ：完全な非中央集権化への道",
+        road_intro: "GanjaFlareは、Flare Network上で$GANJA、ゲーム、NFTを通じてコミュニティ主導のカルチャー資産を構築するプロジェクトです。プレセールなし、VCなし、チーム用保有枠なしの「100%フェアランチ」でスタートしており、私たちの最終目的地は完全な非中央集権化です。",
+        road_intro2: "プロダクトを通じたコミュニティへの還元と初期LP（流動性）の完全バーンにより、$GANJAを永久に不滅な「コミュニティ主導型ミームコイン・カルチャー」へと昇華させます。",
+        road_p1_h: "Phase 1: 基礎構築と初期点火（達成済・進行中）",
+        road_p1_li1: "100%フェアランチ",
+        road_p1_li2: "戦略的リザーブ枠の透明な運用",
+        road_p1_li3: "デフレメカニズム（定期バーン）の稼働",
+        road_p2_h: "Phase 2: カルチャー拡大とオーガニックな分配（現在のフェーズ）",
+        road_p2_li1: "体験型ゲームエコシステム",
+        road_p2_li2: "NFTエコシステムの進化",
+        road_p2_li3: "コミュニティ還元（Giveaway）と流動性強化",
+        road_p3_h: "Phase 3: 最終LPバーンと永久不滅化",
+        road_p3_li1: "<strong style=\"color: #f8fafc;\">リザーブ枠の完全分配・バーン</strong>: ゲームやコミュニティ施策を通じて、プロモーション用$GANJAをすべて配りきる（または残りをバーン）。",
+        road_p3_li2: "<strong style=\"color: #f8fafc;\">最終LPバーン（解放）</strong>: 開発者が保有する初期LPトークンを永久にバーン（焼却）し、流動性プールを100%ロック（完全ラグプル不能化）。",
+        road_p3_li3: "<strong style=\"color: #f8fafc;\">完全な非中央集権化</strong>: 中央の管理者に頼らず、ホルダー全員の情熱によってのみ自律駆動する「真のコミュニティ主導時代」へ移行。",
+        road_p3_li4: "<strong style=\"color: #f8fafc;\">GanjaFlareの完成</strong>: 誰にも止められない、永久不滅のWeb3カルチャー・ムーブメントとして完結。",
+        road_quote: "「中央管理も、中間マージンも存在しない。あるのは情熱とコミュニティ、そしてFlareエコシステムだけ。」",
         accordion_disc_title: "重要なお願い・免責事項 & 法的遵守",
         disc_sec1_h: "1. 投資助言の厳禁（No Investment Advice）",
         disc_sec1_p: "$GANJA は Flare Network コミュニティの文化的象徴・情熱を共有するためのミームトークンであり、いかなる意味においても金融商品、有価証券、または投資価値を保証するものではありません。「確実な利益」「価格の急上昇」等の投機的表現はコミュニティルール上固く禁止されています。ご自身の判断と責任のもとでご参加ください。",
@@ -1695,6 +1769,23 @@
         tok_sec3_p: "剩余的 42.86%（18,000,000 $GANJA） 经过战略管理，用于社区的可持续扩张与自主经济循环：",
         tok_sec3_li1: "<strong style=\"color: #f8fafc;\">每月永久销毁</strong>: 每月1次将 777,777 $GANJA 发送至黑洞地址永久销毁，逐步减少实际流通量。",
         tok_sec3_li2: "<strong style=\"color: #f8fafc;\">激励与产品回馈</strong>: 通过 GanjaCatRun 游戏奖励、每日彩票和社区活动重新循环发放给积极贡献者。",
+        accordion_road_title: "官方路线图：通往完全去中心化之路",
+        road_intro: "GanjaFlare 是一个建立在 Flare Network 之上的社区驱动型文化生态项目，融合了 $GANJA、链游和 NFT。项目采用 100% 公平发射（Fair Launch）模式，无预售、无 VC 机构投资、无团队留存份额。我们的终极目标是实现完全的去中心化。",
+        road_intro2: "通过产品回馈社区以及彻底销毁初始 LP（流动性），我们将把 $GANJA 升华为永恒不朽的“社区主导型 Meme 文化资产”。",
+        road_p1_h: "Phase 1: 基础设施与初始点燃（已达成 / 进行中）",
+        road_p1_li1: "100% 公平发射 (Fair Launch)",
+        road_p1_li2: "战略储备资金的透明化运营",
+        road_p1_li3: "通缩机制（定期销毁）的启动",
+        road_p2_h: "Phase 2: 文化扩张与有机分配（当前阶段）",
+        road_p2_li1: "可交互的链游生态系统",
+        road_p2_li2: "NFT 生态系统的升级进化",
+        road_p2_li3: "社区回馈（Giveaway）与流动性增强",
+        road_p3_h: "Phase 3: 最终 LP 销毁与永恒化",
+        road_p3_li1: "<strong style=\"color: #f8fafc;\">储备份额的完全分配与销毁</strong>: 通过游戏和社区活动将所有推广用 $GANJA 彻底分发完毕（或销毁剩余部分）。",
+        road_p3_li2: "<strong style=\"color: #f8fafc;\">最终 LP 销毁（释放）</strong>: 永久销毁创始人持有的初始 LP 代币，实现流动性池 100% 永久锁定（彻底杜绝 Rug Pull 风险）。",
+        road_p3_li3: "<strong style=\"color: #f8fafc;\">完全去中心化</strong>: 迈入真正的社区主导时代，无需依赖任何中央管理者，仅凭持有者的热情自律运转。",
+        road_p3_li4: "<strong style=\"color: #f8fafc;\">GanjaFlare 的终极形态</strong>: 成为不可阻挡、永恒不朽的 Web3 文化运动。",
+        road_quote: "“没有中央控制，没有中间商。只有热情、社区，以及 Flare 生态系统。”",
         accordion_disc_title: "重要事项・免责声明与法律合规",
         disc_sec1_h: "1. 严禁投资建议（No Investment Advice）",
         disc_sec1_p: "$GANJA 是用于分享 Flare Network 社区文化象征与热情的模因代币，在任何意义上均不构成金融商品、有价证券或投资价值保证。社区规则严格禁止“保证获利”“价格飙升”等投机性表述。请在个人完全负责的前提下参与。",
