@@ -937,6 +937,7 @@
         <li><a href="#nft" data-i18n="nav_nft">NFT</a></li>
         <li><a href="#game" data-i18n="nav_game">GAME</a></li>
         <li><a href="#team" data-i18n="nav_team">TEAM</a></li>
+        <li><a href="#donations" data-i18n="nav_donations">DONATIONS</a></li>
       </ul>
 
       <div class="lang-switcher">
@@ -986,7 +987,7 @@
         <!-- Swap -->
         <div id="dex-swap" class="tab-content active">
           <p style="color: var(--text-sub); margin-bottom: 8px;" data-i18n="dex_swap_desc">
-            Decentralized trading available on BlazeSwap and SparkDEX.
+            $GANJA is available for decentralized trading on BlazeSwap and SparkDEX.
           </p>
 
           <div class="copy-box" onclick="copyContract('0x9aa42de5ec6f3b3bbf252bf8ac81acb338d888b7', 'copyBtn')">
@@ -998,9 +999,6 @@
 
           <a href="https://app.blazeswap.xyz/swap/" target="_blank" class="btn-mint-style"><i class="fa-solid fa-arrow-up-right-from-square"></i> BlazeSwap</a>
           <a href="https://sparkdex.ai/swap" target="_blank" class="btn-mint-style"><i class="fa-solid fa-arrow-up-right-from-square"></i> SparkDEX</a>
-          <a href="https://flare-explorer.flare.network/token/0x9aA42de5eC6f3B3BbF252bf8ac81ACB338D888b7?tab=token_transfers" target="_blank" class="btn-mint-style" style="background: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%);">
-            <i class="fa-solid fa-compass"></i> Flare Explorer
-          </a>
 
           <div class="dex-chart-container">
             <iframe id="geckoterminal-embed" title="GeckoTerminal Embed" src="https://www.geckoterminal.com/flare/pools/0xe0b9dac33219a84be0b40510198a3e599be383eb?embed=1&info=0&swaps=1" allow="clipboard-write" allowfullscreen></iframe>
@@ -1170,27 +1168,6 @@
           <h4 style="color: #f472b6; margin: 10px 0 6px; font-weight: 800;" data-i18n="disc_sec3_h">3. Legal Compliance</h4>
           <p data-i18n="disc_sec3_p">
             The management team continuously maintains compliance and monitoring systems in accordance with Japanese and international laws and regulations.
-          </p>
-        </div>
-
-        <!-- Donation -->
-        <div style="margin-top: 25px; border-top: 1px solid rgba(52, 211, 153, 0.2); padding-top: 20px;">
-          <h3 style="color: var(--emerald-green); font-size: 1.05rem; font-weight: 800;">
-            <i class="fa-solid fa-hand-holding-heart"></i> <span data-i18n="donate_title">Operations Donation</span>
-          </h3>
-          <p style="font-size: 0.88rem; color: var(--text-main); margin: 8px 0 10px; line-height: 1.6;" data-i18n="donate_desc">
-            GanjaFlare is a non-profit community project. Server and infrastructure fees are currently funded personally by CEO Nikuningyou. If you wish to support ongoing infrastructure operations, voluntary donations in crypto assets (FLR / WFLR, etc.) are deeply appreciated.
-          </p>
-
-          <div class="copy-box" onclick="copyContract('0xE809127d1927EE013834B9E95A53E0b37B688eF7', 'donateCopyBtn')">
-            <div>
-              <div class="copy-text">0xE809127d1927EE013834B9E95A53E0b37B688eF7</div>
-            </div>
-            <div class="copy-btn" id="donateCopyBtn"><i class="fa-solid fa-copy"></i> COPY</div>
-          </div>
-
-          <p style="font-size: 0.8rem; color: #f472b6; margin-top: 10px; line-height: 1.5; background: rgba(0,0,0,0.3); padding: 10px 12px; border-radius: 10px; border: 1px solid rgba(244, 114, 182, 0.2);" data-i18n="donate_notice">
-            ⚠️ <strong>Notice</strong>: Donations are strictly voluntary support for infrastructure and do not convey any token distributions, rights, or financial returns.
           </p>
         </div>
       </div>
@@ -1504,6 +1481,30 @@
         </div>
       </div>
     </section>
+
+    <!-- 7. DONATIONS -->
+    <section id="donations">
+      <div class="sec-title"><i class="fa-solid fa-hand-holding-heart"></i> <span data-i18n="nav_donations">DONATIONS</span></div>
+      <div class="hub-card">
+        <h3 style="color: var(--emerald-green); font-size: 1.05rem; font-weight: 800;">
+          <i class="fa-solid fa-hand-holding-heart"></i> <span data-i18n="donate_title">Operations Donation</span>
+        </h3>
+        <p style="font-size: 0.88rem; color: var(--text-main); margin: 8px 0 10px; line-height: 1.6;" data-i18n="donate_desc">
+          GanjaFlare is a non-profit community project. Server and infrastructure fees are currently funded personally by CEO Nikuningyou. If you wish to support ongoing infrastructure operations, voluntary donations in crypto assets (FLR / WFLR, etc.) are deeply appreciated.
+        </p>
+
+        <div class="copy-box" onclick="copyContract('0xE809127d1927EE013834B9E95A53E0b37B688eF7', 'donateCopyBtn')">
+          <div>
+            <div class="copy-text">0xE809127d1927EE013834B9E95A53E0b37B688eF7</div>
+          </div>
+          <div class="copy-btn" id="donateCopyBtn"><i class="fa-solid fa-copy"></i> COPY</div>
+        </div>
+
+        <p style="font-size: 0.8rem; color: #f472b6; margin-top: 10px; line-height: 1.5; background: rgba(0,0,0,0.3); padding: 10px 12px; border-radius: 10px; border: 1px solid rgba(244, 114, 182, 0.2);" data-i18n="donate_notice">
+          ⚠️ <strong>Notice</strong>: Donations are strictly voluntary support for infrastructure and do not convey any token distributions, rights, or financial returns.
+        </p>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -1526,7 +1527,7 @@
     /* 多言語辞書データ (英語・日本語・中国語) */
     const i18n = {
       en: {
-        nav_home: "HOME", nav_nft: "NFT", nav_game: "GAME", nav_dex: "DEX", nav_tokenomics: "TOKENOMICS", nav_team: "TEAM",
+        nav_home: "HOME", nav_nft: "NFT", nav_game: "GAME", nav_dex: "DEX", nav_tokenomics: "TOKENOMICS", nav_team: "TEAM", nav_donations: "DONATIONS",
         home_desc: "GanjaFlare builds community-driven cultural assets on Flare Network through the Memecoin $GANJA, games, and NFTs.<br>It is defined by collective enthusiasm and resonance, rather than speculative promises.<br>The proper nouns associated with the project carry no endorsement of illegal substances; they embody the shared concept of \"freedom\" inherent to cats and cannabis.",
         nft_v2_launch_btn: "Launch Dokuneko Picture Scroll DApp",
         nft_v2_soldout_txt: "Sold out in just 30 minutes!",
@@ -1565,7 +1566,7 @@
         ga_rules_title: "Rules & Winner Announcement",
         ga_rule1: "One winner selected approximately every 2 weeks to receive prizes or NFTs!",
         ga_rule2: "Winners will be contacted directly via Direct Message on X.",
-        dex_swap_desc: "Decentralized trading available on BlazeSwap and SparkDEX.",
+        dex_swap_desc: "$GANJA is available for decentralized trading on BlazeSwap and SparkDEX.",
         dex_pool_desc: "Provide liquidity ($GANJA / $WFLR) to DEXs to earn trading fee rewards.",
         blaze_step1: "Connect wallet on the BlazeSwap \"Pool\" page.",
         blaze_step2: "Select pair ($GANJA / $WFLR) under \"Add Liquidity\".",
@@ -1621,7 +1622,7 @@
         team_cat_desc: "A poisonous cat born in Sector β of the lowest district in the world after the collapse. In August 2025, he fled the settlement but died from severe starvation. He was found by chance by NIKUNINGYOU and radically remodeled into a mechanical doll. In September 2025, after wandering by chance into the open sector \"Flare Network,\" he generated 42,000,000 $GANJA tokens. GanjaCat's driving force is nitro. His goal is to eat the \"pizza\" he glimpsed in a distant memory."
       },
       ja: {
-        nav_home: "ホーム", nav_nft: "NFT", nav_game: "ゲーム", nav_dex: "DEX", nav_tokenomics: "トークノミクス", nav_team: "チーム",
+        nav_home: "ホーム", nav_nft: "NFT", nav_game: "ゲーム", nav_dex: "DEX", nav_tokenomics: "トークノミクス", nav_team: "チーム", nav_donations: "寄付",
         home_desc: "GanjaFlareはFlareNetworkのMemecoinの$GANJA・ゲーム・NFTを通じ、コミュニティ主導の文化的資産を構築します。<br>投機的な約束はなく、集団的熱意と共鳴によって定義されます。<br>プロジェクトに関する固有名詞は違法薬物を肯定する意味合いはなく、猫と大麻に共通する「自由」の概念を具現化したものです。",
         nft_v2_launch_btn: "毒猫絵巻 DApp へ移動する",
         nft_v2_soldout_txt: "わずか30分で完売しました！",
@@ -1660,7 +1661,7 @@
         ga_rules_title: "ルール & 当選連絡",
         ga_rule1: "約2週間に1度、勝者（1名）を決定し賞金やNFTをプレゼント！",
         ga_rule2: "勝者にはXのDM（ダイレクトメッセージ）にて直接ご連絡します。",
-        dex_swap_desc: "BlazeSwap および SparkDEX にて分散型トレードが可能です。",
+        dex_swap_desc: "$GANJAはBlazeSwap および SparkDEX にて分散型トレードが可能です。",
         dex_pool_desc: "DEXへ流動性（$GANJA / $WFLR など）を提供することで、取引手数料報酬を獲得できます。",
         blaze_step1: "BlazeSwapの「Pool」ページでウォレットを接続します。",
         blaze_step2: "「Add Liquidity」でペア（$GANJA / $WFLR 等）を指定します。",
@@ -1716,7 +1717,7 @@
         team_cat_desc: "崩壊後の世界、最下層地区β区画で生まれた毒猫。2025年8月、集落を脱走するも激しい飢餓により死亡。偶然NIKUNINGYOUに拾われ機械人形に魔改造される。2025年9月、偶然迷い込んだ開放地区「FlareNetwork」で42,000,000枚の$GANJAトークンを生成した。GanjaCatの原動力はニトロ。彼の目的は、遠い記憶で見た「ピザ」を食べること。"
       },
       zh: {
-        nav_home: "主页", nav_nft: "NFT", nav_game: "游戏", nav_dex: "DEX", nav_tokenomics: "代币经济学", nav_team: "团队",
+        nav_home: "主页", nav_nft: "NFT", nav_game: "游戏", nav_dex: "DEX", nav_tokenomics: "代币经济学", nav_team: "团队", nav_donations: "捐赠",
         home_desc: "GanjaFlare在Flare Network上通过Memecoin $GANJA、游戏和NFT构建社区驱动的文化资产。<br>它由集体的热情与共鸣所定义，而非投机承诺。<br>与项目相关的专有名词绝无认可违禁物质之意；它们体现了猫与大麻所共有的“自由”概念。",
         nft_v2_launch_btn: "前往 毒猫绘卷 DApp",
         nft_v2_soldout_txt: "仅用30分钟即售罄！",
@@ -1755,7 +1756,7 @@
         ga_rules_title: "规则与获奖通知",
         ga_rule1: "大约每2周选出1名获胜者，赠送奖金或NFT！",
         ga_rule2: "获胜者将通过X私信（Direct Message）直接联系。",
-        dex_swap_desc: "可在 BlazeSwap 及 SparkDEX 进行去中心化交易。",
+        dex_swap_desc: "$GANJA 可在 BlazeSwap 及 SparkDEX 进行去中心化交易。",
         dex_pool_desc: "向 DEX 提供流动性（$GANJA / $WFLR 等）以赚取交易手续费奖励。",
         blaze_step1: "在 BlazeSwap 的“Pool”页面连接钱包。",
         blaze_step2: "在“Add Liquidity”中选择交易对（$GANJA / $WFLR 等）。",
