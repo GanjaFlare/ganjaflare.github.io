@@ -932,10 +932,10 @@
       
       <ul class="nav-menu" id="nav-menu">
         <li><a href="#home" data-i18n="nav_home">HOME</a></li>
-        <li><a href="#nft" data-i18n="nav_nft">NFT</a></li>
-        <li><a href="#game" data-i18n="nav_game">GAME</a></li>
         <li><a href="#dex" data-i18n="nav_dex">DEX</a></li>
         <li><a href="#tokenomics" data-i18n="nav_tokenomics">TOKENOMICS</a></li>
+        <li><a href="#nft" data-i18n="nav_nft">NFT</a></li>
+        <li><a href="#game" data-i18n="nav_game">GAME</a></li>
         <li><a href="#team" data-i18n="nav_team">TEAM</a></li>
       </ul>
 
@@ -974,280 +974,7 @@
       </div>
     </section>
 
-    <!-- 2. NFT -->
-    <section id="nft">
-      <div class="sec-title"><i class="fa-solid fa-gem"></i> NFT</div>
-      <div class="hub-card">
-        <div class="tab-container">
-          <button class="tab-btn locked active" id="nftv2-tab-btn" onclick="switchTab('nft', 'v2')">
-            <i class="fa-solid fa-clock"></i> <span id="nftv2-timer-text">Calculating...</span>
-          </button>
-          <button class="tab-btn" onclick="switchTab('nft', 'v1')">
-            <i class="fa-solid fa-layer-group"></i> NFT v1
-          </button>
-        </div>
-
-        <!-- NFT v2 -->
-        <div id="nft-v2" class="tab-content active">
-          <div id="nftv2-locked-view" style="text-align: center; padding: 60px 20px; background: rgba(0, 0, 0, 0.4); border: 1px dashed var(--border-emerald); border-radius: 18px; margin: 10px 0;">
-            <div style="font-size: 3rem; color: #f472b6; margin-bottom: 16px; filter: drop-shadow(0 0 12px rgba(244, 114, 182, 0.6));">
-              <i class="fa-solid fa-lock"></i>
-            </div>
-            <div style="font-size: 2.2rem; font-weight: 800; color: #ffffff; letter-spacing: 4px; text-shadow: 0 0 20px rgba(244, 114, 182, 0.8);">
-              SOON
-            </div>
-          </div>
-
-          <div id="nftv2-unlocked-view" style="display: none;">
-            <div style="margin-bottom: 16px; text-align: center;">
-              <div style="display: inline-block; border-radius: 18px; overflow: hidden; border: 2px solid var(--border-emerald); box-shadow: 0 0 25px rgba(52, 211, 153, 0.3);">
-                <video autoplay loop muted playsinline style="width: 100%; max-width: 800px; height: auto; display: block;">
-                  <source src="images/transfer_gate.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-            </div>
-
-            <div style="text-align: center; margin-bottom: 24px;">
-              <a href="https://ganjaflarenftv2dapp.vercel.app/" target="_blank" class="btn-mint-style" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); font-size: 1rem; padding: 14px 28px; width: 100%; max-width: 480px; box-shadow: 0 0 20px rgba(52, 211, 153, 0.5);">
-                <i class="fa-solid fa-rocket"></i> <span data-i18n="nft_v2_launch_btn">Launch Dokuneko Picture Scroll DApp</span> <i class="fa-solid fa-arrow-right"></i>
-              </a>
-              <p style="margin-top: 10px; font-size: 0.85rem; color: #f472b6; font-weight: 700;">
-                <i class="fa-solid fa-fire"></i> <span data-i18n="nft_v2_soldout_txt">Sold out in just 30 minutes!</span>
-                <a href="https://x.com/GanjaFlare/status/2096213662923100434?s=20" target="_blank" style="color: var(--emerald-green); text-decoration: underline; margin-left: 4px;" data-i18n="nft_v2_soldout_link">(See the post from that day)</a>
-              </p>
-            </div>
-
-            <div class="info-card">
-              <h4 style="color: var(--emerald-green); font-size: 1.1rem; font-weight: 800; margin-bottom: 12px;">
-                GanjaFlare NFT v2
-              </h4>
-              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; font-size: 0.88rem; margin-bottom: 15px;">
-                <div><strong data-i18n="nft_v2_coll_name">Collection Name :</strong> <span data-i18n="nft_v2_coll_val">Dokuneko Picture Scroll</span></div>
-                <div><strong data-i18n="nft_v2_supply">Total Supply :</strong> 420</div>
-                <div><strong data-i18n="nft_v2_symbol">Symbol :</strong> DNE</div>
-                <div><strong data-i18n="nft_v2_network">Network :</strong> Flare Mainnet</div>
-              </div>
-
-              <div class="copy-box" onclick="copyContract('0xfdeA703d0920f3cb4E69b1Ea1e6ED989Ba29E79a', 'nftV2CopyBtn')">
-                <div>
-                  <div class="copy-text">0xfdeA703d0920f3cb4E69b1Ea1e6ED989Ba29E79a</div>
-                </div>
-                <div class="copy-btn" id="nftV2CopyBtn"><i class="fa-solid fa-copy"></i> COPY</div>
-              </div>
-            </div>
-
-            <div class="info-card">
-              <h4 style="color: var(--emerald-green); margin-bottom: 10px;"><i class="fa-solid fa-gift"></i> Airdrop & MINT</h4>
-              <ul class="step-list">
-                <li data-i18n="nft_v2_airdrop_rule">Receive 1 DNE Airdrop per 1 GanjaFlare NFT v1 held</li>
-                <li>1 MINT = <strong>22 FLR / 1 DNE</strong></li>
-              </ul>
-              <div style="margin-top: 12px; font-size: 0.85rem; color: #f472b6; font-weight: 700;">
-                <div data-i18n="nft_v2_airdrop_date">🎁 Airdrop: September 3, 12:00 UTC</div>
-                <div data-i18n="nft_v2_mint_date">🪙 Public Mint: September 5, 12:00 UTC</div>
-              </div>
-            </div>
-
-            <div class="info-card">
-              <h4 style="color: var(--emerald-green); margin-bottom: 10px;"><i class="fa-solid fa-coins"></i> <span data-i18n="nft_v2_reward_title">Reward System (1st of Every Month)</span></h4>
-              <div class="rarity-grid">
-                <div class="rarity-card"><div class="name">LEGENDARY 👑</div><div class="rate" data-i18n="rate_leg">150+ pts</div><div class="reward">60 $GANJA</div></div>
-                <div class="rarity-card"><div class="name">EPIC 💎</div><div class="rate" data-i18n="rate_epic">90-149 pts</div><div class="reward">35 $GANJA</div></div>
-                <div class="rarity-card"><div class="name">RARE 🔨</div><div class="rate" data-i18n="rate_rare">60-89 pts</div><div class="reward">20 $GANJA</div></div>
-                <div class="rarity-card"><div class="name">COMMON 🥦</div><div class="rate" data-i18n="rate_com">Below 59 pts</div><div class="reward">12 $GANJA</div></div>
-              </div>
-              <p style="font-size: 0.8rem; color: #94a3b8; margin-top: 8px;" data-i18n="nft_v2_reward_expire">
-                (Unclaimed rewards will expire after 1 month)
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- NFT v1 -->
-        <div id="nft-v1" class="tab-content">
-          <p style="color: var(--text-sub); margin-bottom: 14px;" data-i18n="nft_v1_desc">
-            The official NFT collection v1 symbolizing the culture of GanjaFlare. Exclusive holder perks and airdrop events are active.
-          </p>
-          
-          <div class="coin-slideshow" id="coinSlideshow">
-            <img src="images/ganjagold.png" class="active" alt="Gold Coin">
-            <img src="images/ganjasilver.png" alt="Silver Coin">
-            <img src="images/ganjabronze.png" alt="Bronze Coin">
-            <img src="images/ganjagreen.png" alt="Green Coin">
-            <img src="images/ganjablue.png" alt="Blue Coin">
-            <img src="images/ganjapurple.png" alt="Purple Coin">
-            <img src="images/ganjared.png" alt="Red Coin">
-          </div>
-
-          <div style="text-align: center; margin-bottom: 24px;">
-            <a href="https://ganjaflare-nft-v1-viewer.vercel.app/" target="_blank" class="btn-mint-style" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); font-size: 1rem; padding: 14px 28px; width: 100%; max-width: 480px; box-shadow: 0 0 20px rgba(52, 211, 153, 0.5);">
-              <i class="fa-solid fa-rocket"></i> <span data-i18n="nft_v1_launch_btn">Launch GanjaFlare NFT v1 Viewer</span> <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-
-          <div class="info-card">
-            <h4 style="color: var(--emerald-green); font-size: 1.1rem; font-weight: 800; margin-bottom: 12px;">
-              GanjaFlare NFT v1
-            </h4>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; font-size: 0.88rem; margin-bottom: 15px;">
-              <div><strong data-i18n="nft_v1_coll_name">Collection Name :</strong> <span data-i18n="nft_v1_coll_val">GanjaFlare NFT</span></div>
-              <div><strong data-i18n="nft_v1_supply">Total Supply :</strong> 100</div>
-              <div><strong data-i18n="nft_v1_symbol">Symbol :</strong> GANJANFT</div>
-              <div><strong data-i18n="nft_v1_network">Network :</strong> Flare Mainnet</div>
-            </div>
-
-            <div class="copy-box" onclick="copyContract('0x2768E83F67D1bAFeBc5A49cdCD9B65Cc4DBc9b71', 'nftV1CopyBtn')">
-              <div>
-                <div class="copy-text">0x2768E83F67D1bAFeBc5A49cdCD9B65Cc4DBc9b71</div>
-              </div>
-              <div class="copy-btn" id="nftV1CopyBtn"><i class="fa-solid fa-copy"></i> COPY</div>
-            </div>
-          </div>
-
-          <div style="margin-top: 25px; border-top: 1px solid rgba(52, 211, 153, 0.2); padding-top: 18px;">
-            <h3 style="color: var(--emerald-green); font-size: 1rem; font-weight: 800; text-align: center;">
-              <i class="fa-solid fa-gamepad"></i> Play with GanjaFlareNFT & earn $BILLY!
-            </h3>
-            <p style="color: var(--text-sub); font-size: 0.82rem; margin: 6px 0 10px; text-align: center;" data-i18n="nft_v1_billy_desc">
-              Hold GanjaFlare NFT(v1) and participate in games/community to earn $BILLY! tokens!
-            </p>
-            
-            <div class="compact-video-box">
-              <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/NMno8ag0hq0" title="Play with GanjaFlareNFT & earn $BILLY!" allowfullscreen></iframe>
-              </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 10px;">
-              <a href="https://discord.com/invite/J7pHyxCzg8" target="_blank" class="btn-mint-style discord" style="font-size: 0.82rem; padding: 8px 16px;">
-                <i class="fa-brands fa-discord"></i> <span data-i18n="join_gully_discord">Join Gully Discord</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. GAME -->
-    <section id="game">
-      <div class="sec-title"><i class="fa-solid fa-gamepad"></i> GAME</div>
-      <div class="hub-card">
-        <div class="tab-container">
-          <button class="tab-btn active" onclick="switchTab('game', 'lotto')"><i class="fa-solid fa-ticket"></i> Lotto</button>
-          <button class="tab-btn" onclick="switchTab('game', 'gcr')"><i class="fa-solid fa-gamepad"></i> GCR</button>
-          <button class="tab-btn" onclick="switchTab('game', 'giveaway')"><i class="fa-solid fa-gift"></i> Giveaway</button>
-        </div>
-
-        <!-- Lotto -->
-        <div id="game-lotto" class="tab-content active">
-          <p style="color: var(--text-sub); margin-bottom: 14px;" data-i18n="lotto_desc">Try your luck for free every day! Daily Lotto Arena.</p>
-
-          <div class="lotto-iframe-container">
-            <iframe src="https://ganjaflare-lotto.vercel.app/" title="GanjaFlare Daily Lotto"></iframe>
-          </div>
-
-          <div class="info-card">
-            <div style="color: #f472b6; font-weight: 800; font-size: 0.95rem; margin-bottom: 12px;" data-i18n="lotto_reset">
-              <i class="fa-solid fa-clock"></i> Resets daily at 12:00 UTC (21:00 JST)!
-            </div>
-
-            <div class="rarity-grid">
-              <div class="rarity-card"><div class="name">Mythic 👑</div><div class="rate">0.5%</div><div class="reward">2,000 $GANJA</div></div>
-              <div class="rarity-card"><div class="name">Legendary 💎</div><div class="rate">3.0%</div><div class="reward">500 $GANJA</div></div>
-              <div class="rarity-card"><div class="name">Epic 🪨</div><div class="rate">10.0%</div><div class="reward">100 $GANJA</div></div>
-              <div class="rarity-card"><div class="name">Rare 🔨</div><div class="rate">20.0%</div><div class="reward">30 $GANJA</div></div>
-              <div class="rarity-card"><div class="name">Common 🥦</div><div class="rate">35.0%</div><div class="reward">10 $GANJA</div></div>
-              <div class="rarity-card"><div class="name">No Luck 🍃</div><div class="rate">31.5%</div><div class="reward">Better luck!</div></div>
-            </div>
-
-            <p style="font-size: 0.82rem; color: var(--emerald-green); margin-top: 12px; font-weight: 700;" data-i18n="lotto_safety">
-              <i class="fa-solid fa-shield-halved"></i> Only requires Google Sign-in and manual wallet address entry. Completely safe to use!
-            </p>
-          </div>
-        </div>
-
-        <!-- GCR -->
-        <div id="game-gcr" class="tab-content">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
-            <p style="color: var(--text-sub);" data-i18n="gcr_subtitle">Official runner action game "GanjaCatRun"!</p>
-            <a href="https://ganjaflare.github.io/GanjaCatRun-Web/" target="_blank" class="btn-mint-style" style="margin:0; padding: 8px 16px; font-size: 0.82rem;">
-              <i class="fa-solid fa-expand"></i> <span data-i18n="gcr_fullscreen">Play Fullscreen</span>
-            </a>
-          </div>
-
-          <div class="gcr-game-frame">
-            <iframe src="https://ganjaflare.github.io/GanjaCatRun-Web/" title="GanjaCatRun Game"></iframe>
-          </div>
-
-          <div style="margin: 15px 0; padding: 12px 16px; background: rgba(159, 18, 57, 0.25); border: 1px solid rgba(244, 63, 94, 0.35); border-radius: 14px; text-align: center;">
-            <p style="font-size: 0.82rem; color: #fecdd3; margin-bottom: 8px; font-weight: 700;" data-i18n="gcr_error_notice">
-              <i class="fa-solid fa-triangle-exclamation"></i> Click here if you experience frequent errors in the game screen
-            </p>
-            <a href="https://script.google.com/macros/s/AKfycbynwDqLFmF0lG4Ree0WWVEdm3Twl98SYd7Mtdi8fI7iMun3G9zAzoXA5Ohwy-t2RhJU/exec" target="_blank" class="btn-mint-style" style="background: linear-gradient(135deg, #9f1239 0%, #be123c 100%); margin: 0; font-size: 0.82rem; width: 100%; max-width: 380px; box-shadow: 0 0 12px rgba(190, 18, 60, 0.25); border: 1px solid rgba(251, 113, 133, 0.3);">
-              <i class="fa-solid fa-life-ring"></i> <span data-i18n="gcr_gas_btn">Play Stable Version (GAS Backup)</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
-          </div>
-
-          <div class="info-card">
-            <h4 style="color: var(--emerald-green); margin-bottom: 10px;"><i class="fa-solid fa-trophy"></i> <span data-i18n="gcr_rules_title">Rewards & BURN Rules</span></h4>
-            <ul class="step-list">
-              <li data-i18n="gcr_prize_rule"><strong>Prizes 🎁</strong>: Bi-weekly reward of 500 $GANJA each to the highest scorer and the most active player!</li>
-              <li data-i18n="gcr_burn_rule"><strong>Regular BURN 🔥</strong>: Bi-weekly burn of $GANJA equivalent to total cumulative points earned by all players!</li>
-            </ul>
-          </div>
-
-          <div class="info-card">
-            <h4 style="color: var(--emerald-green); margin-bottom: 10px;"><i class="fa-solid fa-gamepad"></i> <span data-i18n="gcr_controls_title">Controls & Key Bindings</span></h4>
-            <p style="font-size: 0.85rem; color: var(--text-sub); margin-bottom: 10px;" data-i18n="gcr_controls_desc">
-              Enter your X account handle on screen to select mode. Control via on-screen A button or keyboard.
-            </p>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; font-size: 0.82rem;">
-              <div style="background: rgba(255,255,255,0.05); padding: 8px 12px; border-radius: 8px;">
-                <strong style="color: #f472b6;" data-i18n="ctrl_jump">Jump / Restart</strong><br> Space / Up Arrow (or A Button)
-              </div>
-              <div style="background: rgba(255,255,255,0.05); padding: 8px 12px; border-radius: 8px;">
-                <strong style="color: #f472b6;" data-i18n="ctrl_pause">Pause / Resume</strong><br> Enter Key
-              </div>
-              <div style="background: rgba(255,255,255,0.05); padding: 8px 12px; border-radius: 8px;">
-                <strong style="color: #f472b6;" data-i18n="ctrl_lb">Leaderboard Display</strong><br> M / Backspace Key
-              </div>
-              <div style="background: rgba(255,255,255,0.05); padding: 8px 12px; border-radius: 8px;">
-                <strong style="color: #f472b6;" data-i18n="ctrl_page">Ranking Page Switch</strong><br> Left / Right Arrow Keys
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Giveaway -->
-        <div id="game-giveaway" class="tab-content">
-          <div class="tron-title">GIVEAWAY</div>
-          <p style="color: var(--text-sub); margin-bottom: 14px;" data-i18n="ga_desc">Giving back to the community! Bi-weekly Giveaway events.</p>
-
-          <div class="info-card">
-            <h4 style="color: var(--emerald-green); margin-bottom: 10px;"><i class="fa-solid fa-clipboard-check"></i> <span data-i18n="ga_how_title">How to Participate</span></h4>
-            <ul class="step-list">
-              <li><strong data-i18n="ga_step1_lbl">Step 1</strong>: <span data-i18n="ga_step1_txt">Follow</span> <a href="https://x.com/GanjaFlare" target="_blank" style="color: var(--emerald-green);">@GanjaFlare</a></li>
-              <li data-i18n="ga_step2_txt"><strong>Step 2</strong>: Post on X including <code>@GanjaFlare</code> with your passionate thoughts or favorite aspects of GanjaFlare / $GANJA! 🌿🔥</li>
-            </ul>
-
-            <a href="https://x.com/intent/tweet?text=@GanjaFlare%20" target="_blank" class="btn-mint-style x-btn" style="margin-top: 12px; width: 100%;">
-              <i class="fa-brands fa-x-twitter"></i> JOIN NOW
-            </a>
-          </div>
-
-          <div class="info-card">
-            <h4 style="color: var(--emerald-green); margin-bottom: 10px;"><i class="fa-solid fa-circle-info"></i> <span data-i18n="ga_rules_title">Rules & Winner Announcement</span></h4>
-            <ul class="step-list">
-              <li data-i18n="ga_rule1">One winner selected approximately every 2 weeks to receive prizes or NFTs!</li>
-              <li data-i18n="ga_rule2">Winners will be contacted directly via Direct Message on X.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4. DEX -->
+    <!-- 2. DEX -->
     <section id="dex">
       <div class="sec-title"><i class="fa-solid fa-right-left"></i> DEX</div>
       <div class="hub-card">
@@ -1309,7 +1036,7 @@
       </div>
     </section>
 
-    <!-- 5. TOKENOMICS -->
+    <!-- 3. TOKENOMICS -->
     <section id="tokenomics">
       <div class="sec-title"><i class="fa-solid fa-coins"></i> TOKENOMICS</div>
       <div class="hub-card">
@@ -1465,6 +1192,279 @@
           <p style="font-size: 0.8rem; color: #f472b6; margin-top: 10px; line-height: 1.5; background: rgba(0,0,0,0.3); padding: 10px 12px; border-radius: 10px; border: 1px solid rgba(244, 114, 182, 0.2);" data-i18n="donate_notice">
             ⚠️ <strong>Notice</strong>: Donations are strictly voluntary support for infrastructure and do not convey any token distributions, rights, or financial returns.
           </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. NFT -->
+    <section id="nft">
+      <div class="sec-title"><i class="fa-solid fa-gem"></i> NFT</div>
+      <div class="hub-card">
+        <div class="tab-container">
+          <button class="tab-btn locked active" id="nftv2-tab-btn" onclick="switchTab('nft', 'v2')">
+            <i class="fa-solid fa-clock"></i> <span id="nftv2-timer-text">Calculating...</span>
+          </button>
+          <button class="tab-btn" onclick="switchTab('nft', 'v1')">
+            <i class="fa-solid fa-layer-group"></i> NFT v1
+          </button>
+        </div>
+
+        <!-- NFT v2 -->
+        <div id="nft-v2" class="tab-content active">
+          <div id="nftv2-locked-view" style="text-align: center; padding: 60px 20px; background: rgba(0, 0, 0, 0.4); border: 1px dashed var(--border-emerald); border-radius: 18px; margin: 10px 0;">
+            <div style="font-size: 3rem; color: #f472b6; margin-bottom: 16px; filter: drop-shadow(0 0 12px rgba(244, 114, 182, 0.6));">
+              <i class="fa-solid fa-lock"></i>
+            </div>
+            <div style="font-size: 2.2rem; font-weight: 800; color: #ffffff; letter-spacing: 4px; text-shadow: 0 0 20px rgba(244, 114, 182, 0.8);">
+              SOON
+            </div>
+          </div>
+
+          <div id="nftv2-unlocked-view" style="display: none;">
+            <div style="margin-bottom: 16px; text-align: center;">
+              <div style="display: inline-block; border-radius: 18px; overflow: hidden; border: 2px solid var(--border-emerald); box-shadow: 0 0 25px rgba(52, 211, 153, 0.3);">
+                <video autoplay loop muted playsinline style="width: 100%; max-width: 800px; height: auto; display: block;">
+                  <source src="images/transfer_gate.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+
+            <div style="text-align: center; margin-bottom: 24px;">
+              <a href="https://ganjaflarenftv2dapp.vercel.app/" target="_blank" class="btn-mint-style" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); font-size: 1rem; padding: 14px 28px; width: 100%; max-width: 480px; box-shadow: 0 0 20px rgba(52, 211, 153, 0.5);">
+                <i class="fa-solid fa-rocket"></i> <span data-i18n="nft_v2_launch_btn">Launch Dokuneko Picture Scroll DApp</span> <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <p style="margin-top: 10px; font-size: 0.85rem; color: #f472b6; font-weight: 700;">
+                <i class="fa-solid fa-fire"></i> <span data-i18n="nft_v2_soldout_txt">Sold out in just 30 minutes!</span>
+                <a href="https://x.com/GanjaFlare/status/2096213662923100434?s=20" target="_blank" style="color: var(--emerald-green); text-decoration: underline; margin-left: 4px;" data-i18n="nft_v2_soldout_link">(See the post from that day)</a>
+              </p>
+            </div>
+
+            <div class="info-card">
+              <h4 style="color: var(--emerald-green); font-size: 1.1rem; font-weight: 800; margin-bottom: 12px;">
+                GanjaFlare NFT v2
+              </h4>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; font-size: 0.88rem; margin-bottom: 15px;">
+                <div><strong data-i18n="nft_v2_coll_name">Collection Name :</strong> <span data-i18n="nft_v2_coll_val">Dokuneko Picture Scroll</span></div>
+                <div><strong data-i18n="nft_v2_supply">Total Supply :</strong> 420</div>
+                <div><strong data-i18n="nft_v2_symbol">Symbol :</strong> DNE</div>
+                <div><strong data-i18n="nft_v2_network">Network :</strong> Flare Mainnet</div>
+              </div>
+
+              <div class="copy-box" onclick="copyContract('0xfdeA703d0920f3cb4E69b1Ea1e6ED989Ba29E79a', 'nftV2CopyBtn')">
+                <div>
+                  <div class="copy-text">0xfdeA703d0920f3cb4E69b1Ea1e6ED989Ba29E79a</div>
+                </div>
+                <div class="copy-btn" id="nftV2CopyBtn"><i class="fa-solid fa-copy"></i> COPY</div>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <h4 style="color: var(--emerald-green); margin-bottom: 10px;"><i class="fa-solid fa-gift"></i> Airdrop & MINT</h4>
+              <ul class="step-list">
+                <li data-i18n="nft_v2_airdrop_rule">Receive 1 DNE Airdrop per 1 GanjaFlare NFT v1 held</li>
+                <li>1 MINT = <strong>22 FLR / 1 DNE</strong></li>
+              </ul>
+              <div style="margin-top: 12px; font-size: 0.85rem; color: #f472b6; font-weight: 700;">
+                <div data-i18n="nft_v2_airdrop_date">🎁 Airdrop: September 3, 12:00 UTC</div>
+                <div data-i18n="nft_v2_mint_date">🪙 Public Mint: September 5, 12:00 UTC</div>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <h4 style="color: var(--emerald-green); margin-bottom: 10px;"><i class="fa-solid fa-coins"></i> <span data-i18n="nft_v2_reward_title">Reward System (1st of Every Month)</span></h4>
+              <div class="rarity-grid">
+                <div class="rarity-card"><div class="name">LEGENDARY 👑</div><div class="rate" data-i18n="rate_leg">150+ pts</div><div class="reward">60 $GANJA</div></div>
+                <div class="rarity-card"><div class="name">EPIC 💎</div><div class="rate" data-i18n="rate_epic">90-149 pts</div><div class="reward">35 $GANJA</div></div>
+                <div class="rarity-card"><div class="name">RARE 🔨</div><div class="rate" data-i18n="rate_rare">60-89 pts</div><div class="reward">20 $GANJA</div></div>
+                <div class="rarity-card"><div class="name">COMMON 🥦</div><div class="rate" data-i18n="rate_com">Below 59 pts</div><div class="reward">12 $GANJA</div></div>
+              </div>
+              <p style="font-size: 0.8rem; color: #94a3b8; margin-top: 8px;" data-i18n="nft_v2_reward_expire">
+                (Unclaimed rewards will expire after 1 month)
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- NFT v1 -->
+        <div id="nft-v1" class="tab-content">
+          <p style="color: var(--text-sub); margin-bottom: 14px;" data-i18n="nft_v1_desc">
+            The official NFT collection v1 symbolizing the culture of GanjaFlare. Exclusive holder perks and airdrop events are active.
+          </p>
+          
+          <div class="coin-slideshow" id="coinSlideshow">
+            <img src="images/ganjagold.png" class="active" alt="Gold Coin">
+            <img src="images/ganjasilver.png" alt="Silver Coin">
+            <img src="images/ganjabronze.png" alt="Bronze Coin">
+            <img src="images/ganjagreen.png" alt="Green Coin">
+            <img src="images/ganjablue.png" alt="Blue Coin">
+            <img src="images/ganjapurple.png" alt="Purple Coin">
+            <img src="images/ganjared.png" alt="Red Coin">
+          </div>
+
+          <div style="text-align: center; margin-bottom: 24px;">
+            <a href="https://ganjaflare-nft-v1-viewer.vercel.app/" target="_blank" class="btn-mint-style" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); font-size: 1rem; padding: 14px 28px; width: 100%; max-width: 480px; box-shadow: 0 0 20px rgba(52, 211, 153, 0.5);">
+              <i class="fa-solid fa-rocket"></i> <span data-i18n="nft_v1_launch_btn">Launch GanjaFlare NFT v1 Viewer</span> <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="info-card">
+            <h4 style="color: var(--emerald-green); font-size: 1.1rem; font-weight: 800; margin-bottom: 12px;">
+              GanjaFlare NFT v1
+            </h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; font-size: 0.88rem; margin-bottom: 15px;">
+              <div><strong data-i18n="nft_v1_coll_name">Collection Name :</strong> <span data-i18n="nft_v1_coll_val">GanjaFlare NFT</span></div>
+              <div><strong data-i18n="nft_v1_supply">Total Supply :</strong> 100</div>
+              <div><strong data-i18n="nft_v1_symbol">Symbol :</strong> GANJANFT</div>
+              <div><strong data-i18n="nft_v1_network">Network :</strong> Flare Mainnet</div>
+            </div>
+
+            <div class="copy-box" onclick="copyContract('0x2768E83F67D1bAFeBc5A49cdCD9B65Cc4DBc9b71', 'nftV1CopyBtn')">
+              <div>
+                <div class="copy-text">0x2768E83F67D1bAFeBc5A49cdCD9B65Cc4DBc9b71</div>
+              </div>
+              <div class="copy-btn" id="nftV1CopyBtn"><i class="fa-solid fa-copy"></i> COPY</div>
+            </div>
+          </div>
+
+          <div style="margin-top: 25px; border-top: 1px solid rgba(52, 211, 153, 0.2); padding-top: 18px;">
+            <h3 style="color: var(--emerald-green); font-size: 1rem; font-weight: 800; text-align: center;">
+              <i class="fa-solid fa-gamepad"></i> Play with GanjaFlareNFT & earn $BILLY!
+            </h3>
+            <p style="color: var(--text-sub); font-size: 0.82rem; margin: 6px 0 10px; text-align: center;" data-i18n="nft_v1_billy_desc">
+              Hold GanjaFlare NFT(v1) and participate in games/community to earn $BILLY! tokens!
+            </p>
+            
+            <div class="compact-video-box">
+              <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/NMno8ag0hq0" title="Play with GanjaFlareNFT & earn $BILLY!" allowfullscreen></iframe>
+              </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 10px;">
+              <a href="https://discord.com/invite/J7pHyxCzg8" target="_blank" class="btn-mint-style discord" style="font-size: 0.82rem; padding: 8px 16px;">
+                <i class="fa-brands fa-discord"></i> <span data-i18n="join_gully_discord">Join Gully Discord</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. GAME -->
+    <section id="game">
+      <div class="sec-title"><i class="fa-solid fa-gamepad"></i> GAME</div>
+      <div class="hub-card">
+        <div class="tab-container">
+          <button class="tab-btn active" onclick="switchTab('game', 'lotto')"><i class="fa-solid fa-ticket"></i> Lotto</button>
+          <button class="tab-btn" onclick="switchTab('game', 'gcr')"><i class="fa-solid fa-gamepad"></i> GCR</button>
+          <button class="tab-btn" onclick="switchTab('game', 'giveaway')"><i class="fa-solid fa-gift"></i> Giveaway</button>
+        </div>
+
+        <!-- Lotto -->
+        <div id="game-lotto" class="tab-content active">
+          <p style="color: var(--text-sub); margin-bottom: 14px;" data-i18n="lotto_desc">Try your luck for free every day! Daily Lotto Arena.</p>
+
+          <div class="lotto-iframe-container">
+            <iframe src="https://ganjaflare-lotto.vercel.app/" title="GanjaFlare Daily Lotto"></iframe>
+          </div>
+
+          <div class="info-card">
+            <div style="color: #f472b6; font-weight: 800; font-size: 0.95rem; margin-bottom: 12px;" data-i18n="lotto_reset">
+              <i class="fa-solid fa-clock"></i> Resets daily at 12:00 UTC (21:00 JST)!
+            </div>
+
+            <div class="rarity-grid">
+              <div class="rarity-card"><div class="name">Mythic 👑</div><div class="rate">0.5%</div><div class="reward">2,000 $GANJA</div></div>
+              <div class="rarity-card"><div class="name">Legendary 💎</div><div class="rate">3.0%</div><div class="reward">500 $GANJA</div></div>
+              <div class="rarity-card"><div class="name">Epic 🪨</div><div class="rate">10.0%</div><div class="reward">100 $GANJA</div></div>
+              <div class="rarity-card"><div class="name">Rare 🔨</div><div class="rate">20.0%</div><div class="reward">30 $GANJA</div></div>
+              <div class="rarity-card"><div class="name">Common 🥦</div><div class="rate">35.0%</div><div class="reward">10 $GANJA</div></div>
+              <div class="rarity-card"><div class="name">No Luck 🍃</div><div class="rate">31.5%</div><div class="reward">Better luck!</div></div>
+            </div>
+
+            <p style="font-size: 0.82rem; color: var(--emerald-green); margin-top: 12px; font-weight: 700;" data-i18n="lotto_safety">
+              <i class="fa-solid fa-shield-halved"></i> Only requires Google Sign-in and manual wallet address entry. Completely safe to use!
+            </p>
+          </div>
+        </div>
+
+        <!-- GCR -->
+        <div id="game-gcr" class="tab-content">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
+            <p style="color: var(--text-sub);" data-i18n="gcr_subtitle">Official runner action game "GanjaCatRun"!</p>
+            <a href="https://ganjaflare.github.io/GanjaCatRun-Web/" target="_blank" class="btn-mint-style" style="margin:0; padding: 8px 16px; font-size: 0.82rem;">
+              <i class="fa-solid fa-expand"></i> <span data-i18n="gcr_fullscreen">Play Fullscreen</span>
+            </a>
+          </div>
+
+          <div class="gcr-game-frame">
+            <iframe src="https://ganjaflare.github.io/GanjaCatRun-Web/" title="GanjaCatRun Game"></iframe>
+          </div>
+
+          <div style="margin: 15px 0; padding: 12px 16px; background: rgba(159, 18, 57, 0.25); border: 1px solid rgba(244, 63, 94, 0.35); border-radius: 14px; text-align: center;">
+            <p style="font-size: 0.82rem; color: #fecdd3; margin-bottom: 8px; font-weight: 700;" data-i18n="gcr_error_notice">
+              <i class="fa-solid fa-triangle-exclamation"></i> Click here if you experience frequent errors in the game screen
+            </p>
+            <a href="https://script.google.com/macros/s/AKfycbynwDqLFmF0lG4Ree0WWVEdm3Twl98SYd7Mtdi8fI7iMun3G9zAzoXA5Ohwy-t2RhJU/exec" target="_blank" class="btn-mint-style" style="background: linear-gradient(135deg, #9f1239 0%, #be123c 100%); margin: 0; font-size: 0.82rem; width: 100%; max-width: 380px; box-shadow: 0 0 12px rgba(190, 18, 60, 0.25); border: 1px solid rgba(251, 113, 133, 0.3);">
+              <i class="fa-solid fa-life-ring"></i> <span data-i18n="gcr_gas_btn">Play Stable Version (GAS Backup)</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+
+          <div class="info-card">
+            <h4 style="color: var(--emerald-green); margin-bottom: 10px;"><i class="fa-solid fa-trophy"></i> <span data-i18n="gcr_rules_title">Rewards & BURN Rules</span></h4>
+            <ul class="step-list">
+              <li data-i18n="gcr_prize_rule"><strong>Prizes 🎁</strong>: Bi-weekly reward of 500 $GANJA each to the highest scorer and the most active player!</li>
+              <li data-i18n="gcr_burn_rule"><strong>Regular BURN 🔥</strong>: Bi-weekly burn of $GANJA equivalent to total cumulative points earned by all players!</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h4 style="color: var(--emerald-green); margin-bottom: 10px;"><i class="fa-solid fa-gamepad"></i> <span data-i18n="gcr_controls_title">Controls & Key Bindings</span></h4>
+            <p style="font-size: 0.85rem; color: var(--text-sub); margin-bottom: 10px;" data-i18n="gcr_controls_desc">
+              Enter your X account handle on screen to select mode. Control via on-screen A button or keyboard.
+            </p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; font-size: 0.82rem;">
+              <div style="background: rgba(255,255,255,0.05); padding: 8px 12px; border-radius: 8px;">
+                <strong style="color: #f472b6;" data-i18n="ctrl_jump">Jump / Restart</strong><br> Space / Up Arrow (or A Button)
+              </div>
+              <div style="background: rgba(255,255,255,0.05); padding: 8px 12px; border-radius: 8px;">
+                <strong style="color: #f472b6;" data-i18n="ctrl_pause">Pause / Resume</strong><br> Enter Key
+              </div>
+              <div style="background: rgba(255,255,255,0.05); padding: 8px 12px; border-radius: 8px;">
+                <strong style="color: #f472b6;" data-i18n="ctrl_lb">Leaderboard Display</strong><br> M / Backspace Key
+              </div>
+              <div style="background: rgba(255,255,255,0.05); padding: 8px 12px; border-radius: 8px;">
+                <strong style="color: #f472b6;" data-i18n="ctrl_page">Ranking Page Switch</strong><br> Left / Right Arrow Keys
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Giveaway -->
+        <div id="game-giveaway" class="tab-content">
+          <div class="tron-title">GIVEAWAY</div>
+          <p style="color: var(--text-sub); margin-bottom: 14px;" data-i18n="ga_desc">Giving back to the community! Bi-weekly Giveaway events.</p>
+
+          <div class="info-card">
+            <h4 style="color: var(--emerald-green); margin-bottom: 10px;"><i class="fa-solid fa-clipboard-check"></i> <span data-i18n="ga_how_title">How to Participate</span></h4>
+            <ul class="step-list">
+              <li><strong data-i18n="ga_step1_lbl">Step 1</strong>: <span data-i18n="ga_step1_txt">Follow</span> <a href="https://x.com/GanjaFlare" target="_blank" style="color: var(--emerald-green);">@GanjaFlare</a></li>
+              <li data-i18n="ga_step2_txt"><strong>Step 2</strong>: Post on X including <code>@GanjaFlare</code> with your passionate thoughts or favorite aspects of GanjaFlare / $GANJA! 🌿🔥</li>
+            </ul>
+
+            <a href="https://x.com/intent/tweet?text=@GanjaFlare%20" target="_blank" class="btn-mint-style x-btn" style="margin-top: 12px; width: 100%;">
+              <i class="fa-brands fa-x-twitter"></i> JOIN NOW
+            </a>
+          </div>
+
+          <div class="info-card">
+            <h4 style="color: var(--emerald-green); margin-bottom: 10px;"><i class="fa-solid fa-circle-info"></i> <span data-i18n="ga_rules_title">Rules & Winner Announcement</span></h4>
+            <ul class="step-list">
+              <li data-i18n="ga_rule1">One winner selected approximately every 2 weeks to receive prizes or NFTs!</li>
+              <li data-i18n="ga_rule2">Winners will be contacted directly via Direct Message on X.</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
