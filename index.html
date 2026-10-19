@@ -1199,8 +1199,8 @@
 
           <div id="nftv2-unlocked-view" style="display: none;">
             <div style="margin-bottom: 16px; text-align: center;">
-              <div style="display: inline-block; border-radius: 18px; overflow: hidden; border: 2px solid var(--border-emerald); box-shadow: 0 0 25px rgba(52, 211, 153, 0.3);">
-                <video autoplay loop muted playsinline style="width: 100%; max-width: 800px; height: auto; display: block;">
+              <div style="display: block; width: 100%; max-width: 800px; margin: 0 auto; border-radius: 18px; overflow: hidden; border: 2px solid var(--border-emerald); box-shadow: 0 0 25px rgba(52, 211, 153, 0.3);">
+                <video id="nftv2-video" autoplay loop muted playsinline webkit-playsinline preload="auto" poster="images/transfer_gate_poster.jpg" disablepictureinpicture style="width: 100%; height: auto; display: block;">
                   <source src="images/transfer_gate.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
@@ -1897,7 +1897,28 @@
       if (targetContent) {
         targetContent.classList.add('active');
       }
+      if (section === 'nft' && tabName === 'v2') playNftV2Video();
     }
+
+    /* NFT v2 動画：スマホで非表示状態から表示された際に再生が始まらない問題への対策 */
+    function playNftV2Video() {
+      const v = document.getElementById('nftv2-video');
+      if (!v) return;
+      v.muted = true;
+      v.defaultMuted = true;
+      if (v.readyState === 0) v.load();
+      const p = v.play();
+      if (p && typeof p.catch === 'function') p.catch(() => {});
+    }
+    (function () {
+      const v = document.getElementById('nftv2-video');
+      if (!v) return;
+      ['loadedmetadata', 'canplay', 'pause'].forEach(ev => v.addEventListener(ev, () => {
+        if (v.offsetParent !== null && v.paused) playNftV2Video();
+      }));
+    })();
+    document.addEventListener('touchstart', playNftV2Video, { once: true, passive: true });
+    document.addEventListener('click', playNftV2Video, { once: true });
 
     /* NFT v2 カウントダウンタイマー */
     const launchTarget = new Date("2026-09-05T12:00:00Z").getTime();
@@ -1916,7 +1937,10 @@
         btn.classList.remove('locked');
         btn.innerHTML = '<i class="fa-solid fa-sparkles"></i> NFT v2';
         if (lockedView) lockedView.style.display = 'none';
-        if (unlockedView) unlockedView.style.display = 'block';
+        if (unlockedView && unlockedView.style.display !== 'block') {
+          unlockedView.style.display = 'block';
+          playNftV2Video();
+        }
       } else {
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
         const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
