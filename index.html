@@ -578,6 +578,49 @@
       margin: 12px auto;
     }
 
+    .thanks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 10px;
+    }
+
+    .thanks-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 8px 12px;
+      background: rgba(0, 0, 0, 0.28);
+      border: 1px solid rgba(52, 211, 153, 0.18);
+      border-radius: 14px;
+      text-decoration: none;
+      color: var(--text-main);
+      text-align: center;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .thanks-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(52, 211, 153, 0.6);
+      box-shadow: 0 0 14px rgba(52, 211, 153, 0.25);
+    }
+
+    .thanks-card img {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #fff;
+      border: 2px solid rgba(52, 211, 153, 0.35);
+    }
+
+    .thanks-card span {
+      font-size: 0.78rem;
+      font-weight: 700;
+      line-height: 1.3;
+      word-break: break-word;
+    }
+
     .tron-title {
       font-family: 'Orbitron', sans-serif;
       font-weight: 900;
@@ -938,6 +981,7 @@
         <li><a href="#game" data-i18n="nav_game">GAME</a></li>
         <li><a href="#team" data-i18n="nav_team">TEAM</a></li>
         <li><a href="#donations" data-i18n="nav_donations">DONATIONS</a></li>
+        <li><a href="#thanks" data-i18n="nav_thanks">THANKS</a></li>
       </ul>
 
       <div class="lang-switcher">
@@ -1518,6 +1562,89 @@
         </p>
       </div>
     </section>
+    <!-- 8. THANKS -->
+    <section id="thanks">
+      <div class="sec-title"><i class="fa-solid fa-handshake"></i> <span data-i18n="nav_thanks">THANKS</span></div>
+      <div class="hub-card">
+        <p style="font-size: 0.88rem; color: var(--text-sub); margin-bottom: 14px; line-height: 1.6;" data-i18n="thanks_intro">
+          Special thanks to the projects and communities that support GanjaFlare.
+        </p>
+        <div class="thanks-grid">
+          <a class="thanks-card" href="https://au.cc/" target="_blank" rel="noopener noreferrer">
+            <img src="images/AU.webp" alt="" width="56" height="56" loading="lazy">
+            <span>AU</span>
+          </a>
+          <a class="thanks-card" href="https://www.aurixnft.com/" target="_blank" rel="noopener noreferrer">
+            <img src="images/AurixNFT.webp" alt="" width="56" height="56" loading="lazy">
+            <span>AurixNFT</span>
+          </a>
+          <a class="thanks-card" href="https://bifrostwallet.com/" target="_blank" rel="noopener noreferrer">
+            <img src="images/Bifrost.webp" alt="" width="56" height="56" loading="lazy">
+            <span>Bifrost</span>
+          </a>
+          <a class="thanks-card" href="https://blazeswap.xyz/" target="_blank" rel="noopener noreferrer">
+            <img src="images/BlazeSwap.webp" alt="" width="56" height="56" loading="lazy">
+            <span>BlazeSwap</span>
+          </a>
+          <a class="thanks-card" href="https://www.digitaldynamix.co.uk/" target="_blank" rel="noopener noreferrer">
+            <img src="images/Digital_Dynamix.webp" alt="" width="56" height="56" loading="lazy">
+            <span>Digital Dynamix</span>
+          </a>
+          <a class="thanks-card" href="https://x.com/TheFatCatFLRSGB" target="_blank" rel="noopener noreferrer">
+            <img src="images/The_Fat_Cats.webp" alt="" width="56" height="56" loading="lazy">
+            <span>The Fat Cats</span>
+          </a>
+          <a class="thanks-card" href="https://www.flamix.trade/" target="_blank" rel="noopener noreferrer">
+            <img src="images/Flamix_trade.webp" alt="" width="56" height="56" loading="lazy">
+            <span>Flamix trade</span>
+          </a>
+          <a class="thanks-card" href="https://flare.network/" target="_blank" rel="noopener noreferrer">
+            <img src="images/Flare.webp" alt="" width="56" height="56" loading="lazy">
+            <span>Flare</span>
+          </a>
+          <a class="thanks-card" href="https://flareafrica.xyz/" target="_blank" rel="noopener noreferrer">
+            <img src="images/Flare_Africa.webp" alt="" width="56" height="56" loading="lazy">
+            <span>Flare Africa</span>
+          </a>
+          <a class="thanks-card" href="https://x.com/flarejapangroup" target="_blank" rel="noopener noreferrer">
+            <img src="images/Flare_Japan_Community.webp" alt="" width="56" height="56" loading="lazy">
+            <span>Flare Japan Community</span>
+          </a>
+          <a class="thanks-card" href="https://flare-sensei.com/" target="_blank" rel="noopener noreferrer">
+            <img src="images/Flare_Sensei.webp" alt="" width="56" height="56" loading="lazy">
+            <span>Flare Sensei</span>
+          </a>
+          <a class="thanks-card" href="https://flare.builders/" target="_blank" rel="noopener noreferrer">
+            <img src="images/flare_builders.webp" alt="" width="56" height="56" loading="lazy">
+            <span>flare.builders</span>
+          </a>
+          <a class="thanks-card" href="https://x.com/BOTLOCKcryptoHQ" target="_blank" rel="noopener noreferrer">
+            <img src="images/FlareTopia_BotLockHQ_EcoSystem.webp" alt="" width="56" height="56" loading="lazy">
+            <span>FlareTopia/<wbr>BotLockHQ EcoSystem</span>
+          </a>
+          <a class="thanks-card" href="https://www.gullyflock.com/" target="_blank" rel="noopener noreferrer">
+            <img src="images/gully.webp" alt="" width="56" height="56" loading="lazy">
+            <span>Gully</span>
+          </a>
+          <a class="thanks-card" href="https://picoflr.xyz/" target="_blank" rel="noopener noreferrer">
+            <img src="images/PICO.webp" alt="" width="56" height="56" loading="lazy">
+            <span>PICO</span>
+          </a>
+          <a class="thanks-card" href="https://scopia.xyz/" target="_blank" rel="noopener noreferrer">
+            <img src="images/Scopia.webp" alt="" width="56" height="56" loading="lazy">
+            <span>Scopia</span>
+          </a>
+          <a class="thanks-card" href="https://x.com/maddeningsmart" target="_blank" rel="noopener noreferrer">
+            <img src="images/_Smarty.webp" alt="" width="56" height="56" loading="lazy">
+            <span>$Smarty</span>
+          </a>
+          <a class="thanks-card" href="https://sparkdex.ai/" target="_blank" rel="noopener noreferrer">
+            <img src="images/SparkDEX.webp" alt="" width="56" height="56" loading="lazy">
+            <span>SparkDEX</span>
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -1540,7 +1667,8 @@
     /* 多言語辞書データ (英語・日本語・中国語) */
     const i18n = {
       en: {
-        nav_home: "HOME", nav_nft: "NFT", nav_game: "GAME", nav_dex: "DEX", nav_tokenomics: "TOKENOMICS", nav_team: "TEAM", nav_donations: "DONATIONS",
+        nav_home: "HOME", nav_nft: "NFT", nav_game: "GAME", nav_dex: "DEX", nav_tokenomics: "TOKENOMICS", nav_team: "TEAM", nav_donations: "DONATIONS", nav_thanks: "THANKS",
+        thanks_intro: "Special thanks to the projects and communities that support GanjaFlare.",
         home_desc: "GanjaFlare builds community-driven cultural assets on Flare Network through the Memecoin $GANJA, games, and NFTs.<br>It is defined by collective enthusiasm and resonance, rather than speculative promises.<br>The proper nouns associated with the project carry no endorsement of illegal substances; they embody the shared concept of \"freedom\" inherent to cats and cannabis.",
         nft_v2_launch_btn: "Launch Doku Neko Emaki DApp",
         nft_v2_market_btn: "Trade on Digital Dynamix",
@@ -1637,7 +1765,8 @@
         team_cat_desc: "A poisonous cat born in Sector β of the lowest district in the world after the collapse. In August 2025, he fled the settlement but died from severe starvation. He was found by chance by NIKUNINGYOU and radically remodeled into a mechanical doll. In September 2025, after wandering by chance into the open sector \"Flare Network,\" he generated 42,000,000 $GANJA tokens. GanjaCat's driving force is nitro. His goal is to eat the \"pizza\" he glimpsed in a distant memory."
       },
       ja: {
-        nav_home: "ホーム", nav_nft: "NFT", nav_game: "ゲーム", nav_dex: "DEX", nav_tokenomics: "トークノミクス", nav_team: "チーム", nav_donations: "寄付",
+        nav_home: "ホーム", nav_nft: "NFT", nav_game: "ゲーム", nav_dex: "DEX", nav_tokenomics: "トークノミクス", nav_team: "チーム", nav_donations: "寄付", nav_thanks: "THANKS",
+        thanks_intro: "GanjaFlareを支えてくださっているプロジェクト・コミュニティの皆さまに感謝します。",
         home_desc: "GanjaFlareはFlareNetworkのMemecoinの$GANJA・ゲーム・NFTを通じ、コミュニティ主導の文化的資産を構築します。<br>投機的な約束はなく、集団的熱意と共鳴によって定義されます。<br>プロジェクトに関する固有名詞は違法薬物を肯定する意味合いはなく、猫と大麻に共通する「自由」の概念を具現化したものです。",
         nft_v2_launch_btn: "毒猫絵巻 DApp へ移動する",
         nft_v2_market_btn: "Digital Dynamixで売買する",
@@ -1734,7 +1863,8 @@
         team_cat_desc: "崩壊後の世界、最下層地区β区画で生まれた毒猫。2025年8月、集落を脱走するも激しい飢餓により死亡。偶然NIKUNINGYOUに拾われ機械人形に魔改造される。2025年9月、偶然迷い込んだ開放地区「FlareNetwork」で42,000,000枚の$GANJAトークンを生成した。GanjaCatの原動力はニトロ。彼の目的は、遠い記憶で見た「ピザ」を食べること。"
       },
       zh: {
-        nav_home: "主页", nav_nft: "NFT", nav_game: "游戏", nav_dex: "DEX", nav_tokenomics: "代币经济学", nav_team: "团队", nav_donations: "捐赠",
+        nav_home: "主页", nav_nft: "NFT", nav_game: "游戏", nav_dex: "DEX", nav_tokenomics: "代币经济学", nav_team: "团队", nav_donations: "捐赠", nav_thanks: "鸣谢",
+        thanks_intro: "衷心感谢支持 GanjaFlare 的项目与社区。",
         home_desc: "GanjaFlare在Flare Network上通过Memecoin $GANJA、游戏和NFT构建社区驱动的文化资产。<br>它由集体的热情与共鸣所定义，而非投机承诺。<br>与项目相关的专有名词绝无认可违禁物质之意；它们体现了猫与大麻所共有的“自由”概念。",
         nft_v2_launch_btn: "前往 毒猫绘卷 DApp",
         nft_v2_market_btn: "在 Digital Dynamix 交易",
