@@ -578,6 +578,57 @@
       margin: 12px auto;
     }
 
+    #consent-banner {
+      position: fixed;
+      left: 50%;
+      bottom: 16px;
+      transform: translateX(-50%);
+      width: calc(100% - 24px);
+      max-width: 720px;
+      z-index: 2000;
+      display: none;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 16px;
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid rgba(52, 211, 153, 0.45);
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+      font-size: 0.82rem;
+      line-height: 1.5;
+      color: var(--text-main);
+    }
+
+    #consent-banner.show { display: flex; }
+
+    .consent-text { flex: 1 1 280px; }
+
+    .consent-btns { display: flex; gap: 8px; flex: 0 0 auto; }
+
+    .consent-btn {
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 9px 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      border: 1px solid rgba(52, 211, 153, 0.6);
+      background: transparent;
+      color: var(--emerald-green);
+    }
+
+    .consent-btn.accept {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: #fff;
+      border-color: transparent;
+    }
+
+    @media (max-width: 600px) {
+      .consent-btns { width: 100%; }
+      .consent-btn { flex: 1; }
+    }
+
     .thanks-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
@@ -945,6 +996,24 @@
       }
     }
   </style>
+  <!-- Microsoft Clarity（アクセス解析）：同意が得られるまでは analytics_storage を denied にしておく -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "z8878nkdno");
+  </script>
+  <script>
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('gf_cookie_consent'); } catch (e) {}
+      window.clarity('consentv2', {
+        ad_storage: 'denied',
+        analytics_storage: saved === 'granted' ? 'granted' : 'denied'
+      });
+    })();
+  </script>
 </head>
 <body>
 
@@ -1660,8 +1729,20 @@
       <p style="font-size: 0.8rem; color: #94a3b8;">
         © GanjaFlare — Bringing passion and trust to the Flare ecosystem!
       </p>
+      <button type="button" id="consent-reopen" data-i18n="consent_settings" style="background: none; border: none; color: #94a3b8; font-size: 0.75rem; text-decoration: underline; cursor: pointer; margin-top: 6px; font-family: inherit;">Cookie settings</button>
     </div>
   </footer>
+
+  <!-- Cookie同意バナー（Microsoft Clarity用） -->
+  <div id="consent-banner" role="dialog" aria-live="polite">
+    <div class="consent-text" data-i18n="consent_text">
+      This site uses Microsoft Clarity (usage analytics, heatmaps and session recordings), which uses cookies. Do you allow this?
+    </div>
+    <div class="consent-btns">
+      <button type="button" class="consent-btn" id="consent-decline" data-i18n="consent_decline">Decline</button>
+      <button type="button" class="consent-btn accept" id="consent-accept" data-i18n="consent_accept">Accept</button>
+    </div>
+  </div>
 
   <script>
     /* 多言語辞書データ (英語・日本語・中国語) */
@@ -1669,6 +1750,8 @@
       en: {
         nav_home: "HOME", nav_nft: "NFT", nav_game: "GAME", nav_dex: "DEX", nav_tokenomics: "TOKENOMICS", nav_team: "TEAM", nav_donations: "DONATIONS", nav_thanks: "THANKS",
         thanks_intro: "Special thanks to the projects and communities that support GanjaFlare.",
+        consent_text: "This site uses Microsoft Clarity (usage analytics, heatmaps and session recordings), which uses cookies. Do you allow this?",
+        consent_accept: "Accept", consent_decline: "Decline", consent_settings: "Cookie settings",
         home_desc: "GanjaFlare builds community-driven cultural assets on Flare Network through the Memecoin $GANJA, games, and NFTs.<br>It is defined by collective enthusiasm and resonance, rather than speculative promises.<br>The proper nouns associated with the project carry no endorsement of illegal substances; they embody the shared concept of \"freedom\" inherent to cats and cannabis.",
         nft_v2_launch_btn: "Launch Doku Neko Emaki DApp",
         nft_v2_market_btn: "Trade on Digital Dynamix",
@@ -1767,6 +1850,8 @@
       ja: {
         nav_home: "ホーム", nav_nft: "NFT", nav_game: "ゲーム", nav_dex: "DEX", nav_tokenomics: "トークノミクス", nav_team: "チーム", nav_donations: "寄付", nav_thanks: "THANKS",
         thanks_intro: "GanjaFlareを支えてくださっているプロジェクト・コミュニティの皆さまに感謝します。",
+        consent_text: "当サイトでは、利用状況の分析（ヒートマップ・画面録画）のためにMicrosoft Clarityを使用しており、Cookieが使われます。許可しますか？",
+        consent_accept: "許可する", consent_decline: "許可しない", consent_settings: "Cookie設定",
         home_desc: "GanjaFlareはFlareNetworkのMemecoinの$GANJA・ゲーム・NFTを通じ、コミュニティ主導の文化的資産を構築します。<br>投機的な約束はなく、集団的熱意と共鳴によって定義されます。<br>プロジェクトに関する固有名詞は違法薬物を肯定する意味合いはなく、猫と大麻に共通する「自由」の概念を具現化したものです。",
         nft_v2_launch_btn: "毒猫絵巻 DApp へ移動する",
         nft_v2_market_btn: "Digital Dynamixで売買する",
@@ -1865,6 +1950,8 @@
       zh: {
         nav_home: "主页", nav_nft: "NFT", nav_game: "游戏", nav_dex: "DEX", nav_tokenomics: "代币经济学", nav_team: "团队", nav_donations: "捐赠", nav_thanks: "鸣谢",
         thanks_intro: "衷心感谢支持 GanjaFlare 的项目与社区。",
+        consent_text: "本网站使用 Microsoft Clarity（访问分析、热力图和会话录制），并会使用 Cookie。您是否允许？",
+        consent_accept: "允许", consent_decline: "拒绝", consent_settings: "Cookie 设置",
         home_desc: "GanjaFlare在Flare Network上通过Memecoin $GANJA、游戏和NFT构建社区驱动的文化资产。<br>它由集体的热情与共鸣所定义，而非投机承诺。<br>与项目相关的专有名词绝无认可违禁物质之意；它们体现了猫与大麻所共有的“自由”概念。",
         nft_v2_launch_btn: "前往 毒猫绘卷 DApp",
         nft_v2_market_btn: "在 Digital Dynamix 交易",
@@ -2232,6 +2319,29 @@
       },
       "retina_detect": true
     });
+  </script>
+
+  <script>
+    /* Cookie同意（Microsoft Clarity） */
+    (function () {
+      var KEY = 'gf_cookie_consent';
+      var banner = document.getElementById('consent-banner');
+      if (!banner) return;
+      function get() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+      function set(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+      function apply(v) {
+        if (window.clarity) {
+          window.clarity('consentv2', { ad_storage: 'denied', analytics_storage: v === 'granted' ? 'granted' : 'denied' });
+        }
+      }
+      function show() { banner.classList.add('show'); }
+      function hide() { banner.classList.remove('show'); }
+      document.getElementById('consent-accept').addEventListener('click', function () { set('granted'); apply('granted'); hide(); });
+      document.getElementById('consent-decline').addEventListener('click', function () { set('denied'); apply('denied'); hide(); });
+      var reopen = document.getElementById('consent-reopen');
+      if (reopen) reopen.addEventListener('click', show);
+      if (!get()) show();
+    })();
   </script>
 </body>
 </html>
