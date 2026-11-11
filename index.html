@@ -629,10 +629,79 @@
       .consent-btn { flex: 1; }
     }
 
+    .market-box { flex: 1 1 100%; }
+
+    .market-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-sub);
+      margin-bottom: 6px;
+    }
+
+    .market-row { display: flex; gap: 10px; }
+
+    .market-tile {
+      flex: 1 1 0;
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 10px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(168, 85, 247, 0.28) 0%, rgba(244, 114, 182, 0.2) 100%);
+      border: 1px solid rgba(168, 85, 247, 0.55);
+      color: #f8fafc;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 700;
+      box-shadow: 0 0 14px rgba(168, 85, 247, 0.25);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .market-tile:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 20px rgba(168, 85, 247, 0.45);
+    }
+
+    .market-tile img {
+      width: 28px;
+      height: 28px;
+      flex: 0 0 auto;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #fff;
+    }
+
+    @media (max-width: 560px) {
+      .market-tile {
+        flex-direction: column;
+        gap: 6px;
+        padding: 10px 6px;
+        font-size: 0.78rem;
+        text-align: center;
+      }
+    }
+
     .thanks-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 10px;
+    }
+
+    .thanks-grid .thanks-card { flex: 0 0 calc((100% - 40px) / 5); }
+
+    @media (max-width: 760px) {
+      .thanks-grid .thanks-card { flex-basis: calc((100% - 30px) / 4); }
+    }
+
+    @media (max-width: 560px) {
+      .thanks-grid .thanks-card { flex-basis: calc((100% - 20px) / 3); }
+    }
+
+    @media (max-width: 420px) {
+      .thanks-grid .thanks-card { flex-basis: calc((100% - 10px) / 2); }
     }
 
     .thanks-card {
@@ -1325,12 +1394,20 @@
                 <a href="https://ganjaflarenftv2dapp.vercel.app/" target="_blank" class="btn-mint-style" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); font-size: 1rem; padding: 14px 20px; flex: 1 1 100%; margin: 0; box-shadow: 0 0 20px rgba(52, 211, 153, 0.5);">
                   <i class="fa-solid fa-rocket"></i> <span data-i18n="nft_v2_launch_btn">Launch Doku Neko Emaki DApp</span> <i class="fa-solid fa-arrow-right"></i>
                 </a>
-                <a href="https://www.digitaldynamix.co.uk/nfts/ganjaflare-v2" target="_blank" class="btn-mint-style" style="background: linear-gradient(135deg, rgba(168, 85, 247, 0.28) 0%, rgba(244, 114, 182, 0.2) 100%); border: 1px solid rgba(168, 85, 247, 0.55); color: #f8fafc; font-size: 0.95rem; padding: 14px 14px; flex: 1 1 230px; margin: 0; box-shadow: 0 0 14px rgba(168, 85, 247, 0.25);">
-                  <img src="images/DigitalDynamix_logo.webp" alt="Digital Dynamix" width="26" height="26" style="border-radius: 50%; display: block;"> <span data-i18n="nft_v2_market_btn">Trade on Digital Dynamix</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-                <a href="https://www.aurixnft.com/collection/ganjaflare-nft-v2" target="_blank" class="btn-mint-style" style="background: linear-gradient(135deg, rgba(168, 85, 247, 0.28) 0%, rgba(244, 114, 182, 0.2) 100%); border: 1px solid rgba(168, 85, 247, 0.55); color: #f8fafc; font-size: 0.95rem; padding: 14px 14px; flex: 1 1 230px; margin: 0; box-shadow: 0 0 14px rgba(168, 85, 247, 0.25);">
-                  <img src="images/Aurix_logo.webp" alt="Aurix" width="26" height="26" style="border-radius: 50%; display: block;"> <span data-i18n="nft_aurix_btn">Trade on Aurix</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
+                <div class="market-box">
+                  <div class="market-label" data-i18n="nft_v2_market_label">Trade on</div>
+                  <div class="market-row">
+                    <a class="market-tile" href="https://www.aurixnft.com/collection/ganjaflare-nft-v2" target="_blank" rel="noopener noreferrer">
+                      <img src="images/Aurix_logo.webp" alt="" width="28" height="28"><span>Aurix</span>
+                    </a>
+                    <a class="market-tile" href="https://www.digitaldynamix.co.uk/nfts/ganjaflare-v2" target="_blank" rel="noopener noreferrer">
+                      <img src="images/DigitalDynamix_logo.webp" alt="" width="28" height="28"><span>Digital Dynamix</span>
+                    </a>
+                    <a class="market-tile" href="https://marketplace.ftso.paris/c/0xfdeA703d0920f3cb4E69b1Ea1e6ED989Ba29E79a" target="_blank" rel="noopener noreferrer">
+                      <img src="images/FTSOParis.webp" alt="" width="28" height="28"><span>FTSO Paris</span>
+                    </a>
+                  </div>
+                </div>
               </div>
               <p style="margin-top: 10px; font-size: 0.85rem; color: #f472b6; font-weight: 700;">
                 <i class="fa-solid fa-fire"></i> <span data-i18n="nft_v2_soldout_txt">Sold out in just 30 minutes!</span>
@@ -1695,6 +1772,10 @@
             <img src="images/FlareTopia%3ABotLockHQ%20EcoSystem.webp" alt="" width="56" height="56" loading="lazy">
             <span>FlareTopia/<wbr>BotLockHQ EcoSystem</span>
           </a>
+          <a class="thanks-card" href="https://ftso.paris/" target="_blank" rel="noopener noreferrer">
+            <img src="images/FTSOParis.webp" alt="" width="56" height="56" loading="lazy">
+            <span>FTSO Paris</span>
+          </a>
           <a class="thanks-card" href="https://www.gullyflock.com/" target="_blank" rel="noopener noreferrer">
             <img src="images/gully.webp" alt="" width="56" height="56" loading="lazy">
             <span>Gully</span>
@@ -1766,6 +1847,7 @@
         nft_aurix_btn: "Trade on Aurix",
         nft_v2_soldout_txt: "Sold out in just 30 minutes!",
         nft_v2_soldout_link: "(See the post from that day)",
+        nft_v2_market_label: "Trade on",
         nft_v2_coll_name: "Collection Name :", nft_v2_coll_val: "Dokuneko Picture Scroll",
         nft_v2_supply: "Total Supply :", nft_v2_symbol: "Symbol :", nft_v2_network: "Network :",
         nft_v2_airdrop_rule: "Receive 1 DNE Airdrop per 1 GanjaFlare NFT v1 held",
@@ -1866,6 +1948,7 @@
         nft_aurix_btn: "Aurixで売買する",
         nft_v2_soldout_txt: "わずか30分で完売しました！",
         nft_v2_soldout_link: "（当時の投稿を見る）",
+        nft_v2_market_label: "売買できるマーケット",
         nft_v2_coll_name: "コレクション名 :", nft_v2_coll_val: "毒猫絵巻",
         nft_v2_supply: "総発行枚数 :", nft_v2_symbol: "シンボル :", nft_v2_network: "ネットワーク :",
         nft_v2_airdrop_rule: "GanjaFlare NFT v1 を1枚保有につき 1 DNE を Airdrop",
@@ -1966,6 +2049,7 @@
         nft_aurix_btn: "在 Aurix 交易",
         nft_v2_soldout_txt: "仅用30分钟即售罄！",
         nft_v2_soldout_link: "（查看当时的推文）",
+        nft_v2_market_label: "交易市场",
         nft_v2_coll_name: "系列名称 :", nft_v2_coll_val: "毒猫绘卷",
         nft_v2_supply: "总发行量 :", nft_v2_symbol: "代币符号 :", nft_v2_network: "网络 :",
         nft_v2_airdrop_rule: "每持有1枚 GanjaFlare NFT v1 可获空投 1 DNE",
